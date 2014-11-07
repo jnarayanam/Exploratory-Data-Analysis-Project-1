@@ -8,5 +8,3 @@
         * source("http://sqldf.googlecode.com/svn/trunk/R/sqldf.R")
 ##	NOTES:
 	*  There is bug regarding the compatibility between RSQLite (version 1.0.0) and sqldf (version 0.4-9).
-	* For the plot4, there are two files, one has the requested 480X480 dimensions (plot4.png), and the other has 520X480 (plot4-520-480.png) which looks better.
-		

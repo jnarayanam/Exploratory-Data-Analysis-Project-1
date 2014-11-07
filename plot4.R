@@ -35,22 +35,20 @@ plot4 <- function() {
         
         with (data, {
                 
-                plot(data$DT, data$Global_active_power, type = "l", main = "Golabl Active Power", 
-                     xlab = "", ylab = "Global Active Power (kilowatts)")
+                plot(data$DT, data$Global_active_power, type = "l",
+                     xlab = "", ylab = "Global Active Power")
                 
                 plot(data$DT, data$Voltage, type = "l", xlab = "datetime", ylab = "Voltage")
                 
-                plot(data$DT, data$Sub_metering_1 + data$Sub_metering_2 + data$Sub_metering_3, 
-                     type = "l", xlab = "", ylab = "Energy sub metering")
-                lines(data$DT, data$Sub_metering_1, col = "black")
+                plot(data$DT, data$Sub_metering_1, 
+                     type = "l", xlab = "", ylab = "Energy sub metering", col = "black")
                 lines(data$DT, data$Sub_metering_2, col = "red")
                 lines(data$DT, data$Sub_metering_3, col = "blue")
                 legend("topright", lty = 1, lwd = 2, col = c("black", "red", "blue"), 
-                       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n", cex = 0.8)
-                
+                       legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty = "n", cex = 0.65)
                 
                 plot(data$DT, data$Global_reactive_power, type = "l", 
-                     xlab = "datetime", ylab = "Global reactive power")
+                     xlab = "datetime", ylab = "Global_reactive_power")
                 
                 
                 

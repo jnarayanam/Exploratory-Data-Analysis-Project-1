@@ -33,9 +33,8 @@ data$DT <- strptime(paste(data$Date, data$Time, sep=","), format="%d/%m/%Y,%H:%M
 
 plot3 <- function() {
         par(mfrow = c(1,1))
-        with (data, {plot(data$DT, data$Sub_metering_1 + data$Sub_metering_2 + data$Sub_metering_3, 
-                          type = "l", xlab = "", ylab = "Energy sub metering")
-                     lines(data$DT, data$Sub_metering_1, col = "black")
+        with (data, {plot(data$DT, data$Sub_metering_1,
+                          type = "l", xlab = "", ylab = "Energy sub metering", col = "black")
                      lines(data$DT, data$Sub_metering_2, col = "red")
                      lines(data$DT, data$Sub_metering_3, col = "blue")
                      legend("topright", lty = 1, lwd = 2, col = c("black", "red", "blue"), 
